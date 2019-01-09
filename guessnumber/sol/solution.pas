@@ -1,4 +1,4 @@
-Unit batchgrader;
+Unit communication;
 
 interface
 function add(a,b: longint): longint;

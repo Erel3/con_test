@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
 
 	if (a == b) {
         int q;
-        fscanf(fres, "%d", &q);
+        fscanf(fout, "%d", &q);
         if(sub == 1) {
             fprintf(stderr, "Sub1: %d queries, ", q);
             if(q <= 5) {

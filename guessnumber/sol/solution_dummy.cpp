@@ -1,14 +1,13 @@
+
 #include "guessnumber.h"
 #include <cstdio>
 
 int guess(int n) {
     int l = 1, r = n;
     while(1) {
-        int m = (l + r) >> 1;
-        char c = ask(m);
+        char c = ask(l);
         if(c == '=') break;
-        if(c == '<') l = m + 1;
-        if(c == '>') r = m - 1;
+        l++;
     }
-    return (l + r) >> 1;
+    return l;
 }

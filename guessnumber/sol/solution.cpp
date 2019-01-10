@@ -4,9 +4,11 @@
 int guess(int n) {
     int l = 1, r = n;
     while(1) {
-        char c = ask(l);
+        int m = (l + r) >> 1;
+        char c = ask(m);
         if(c == '=') break;
-        l++;
+        if(c == '<') l = m + 1;
+        if(c == '>') r = m - 1;
     }
-    return l;
+    return (l + r) >> 1;
 }

@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
         fscanf(fout, "%d", &q);
         if(sub == 1) {
             fprintf(stderr, "Sub 1: %d queries, ", q);
-            if(q <= 5) {
+            if(q <= 3) {
                 fprintf(stderr, "ok\n");
                 printf("1.0\n");
             } else {

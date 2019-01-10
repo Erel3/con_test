@@ -27,8 +27,9 @@ char ask(int x) {
 int guess(int n);
 
 int main() {
-    scanf("%d %d", &n, &hidden_number);
+    scanf("%d %d %d", &n, &hidden_number);
     int g = guess(n);
     printf("%d\n", g);
+    printf("%d\n", numq);
     return 0;
 }

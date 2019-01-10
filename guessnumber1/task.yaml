@@ -1,9 +1,0 @@
-name: "guessnumber"
-title: "guessnumber"
-time_limit: 1
-memory_limit: 256
-n_input: 3
-public_testcases: 0, 1, 2
-infile: ""
-outfile: ""
-token_mode: disabled

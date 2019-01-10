@@ -20,14 +20,18 @@ int main(int argc, char **argv) {
         int q;
         fscanf(fres, "%d", &q);
         if(sub == 1) {
+            fprintf(stderr, "Sub1: %d queries, ", q);
             if(q <= 5) {
+                fprintf(stderr, "ok\n");
                 printf("1.0\n");
             } else {
+                fprintf(stderr, "Sub1: too many queries\n");
                 printf("0.0\n");
             }
-            printf("1.0\n");
         } else if(sub == 2) {
+            fprintf(stderr, "Sub2: %d queries, ", q);
             if(q <= 10) {
+                fprintf(stderr, "ok\n");
                 printf("1.0\n");
             } else if(q <= 12) {
                 printf("0.736842105263157\n"); //95*x=70

@@ -30,7 +30,7 @@ int main(int argc, char **argv) {
             if(numq <= 10) {
                 printf("1.0\n");
             } else if(numq <= 12) {
-                printf("0.736842105263157\n"); // 95*x=70
+                printf("0.736842105263157\n"); //95*x=70
             } else  if(numq <= 20) {
                 printf("0.526315789473684\n"); //95*x=50
             } else {

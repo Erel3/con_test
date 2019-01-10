@@ -1,5 +1,5 @@
 class guessnumber {
-    public static int guess(int n) {
+    public static int guess_number(int n) {
         int l = 1, r = n;
         while(true) {
             int m = (l + r) >> 1;

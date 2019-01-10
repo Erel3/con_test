@@ -1,2 +1,2 @@
-int guess(int n);
+int guess_number(int n);
 char ask(int x);

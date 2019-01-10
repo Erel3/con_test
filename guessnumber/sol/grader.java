@@ -26,7 +26,7 @@ public class grader {
         n = scanner.nextInt();
         hidden_number = scanner.nextInt();
 
-        int g = guessnumber.guess(n);
+        int g = guessnumber.guess_number(n);
 
         System.out.println(g);
         System.out.println(numq);

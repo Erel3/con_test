@@ -11,7 +11,7 @@ namespace {
     int n;
     int hidden_number;
     void wrong_answer(const char *MSG) {
-        printf("-1\n", MSG);
+        printf("-1\n");
         exit(0);
     }
 }
@@ -27,7 +27,7 @@ char ask(int x) {
 int guess(int n);
 
 int main() {
-    scanf("%d %d %d", &n, &hidden_number);
+    assert(scanf("%d %d", &n, &hidden_number) == 2);
     int g = guess(n);
     printf("%d\n", g);
     printf("%d\n", numq);

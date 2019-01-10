@@ -31,7 +31,7 @@ public class publicGrader {
             System.exit(0);
         }
 
-        int g = guessnumber.guess(n);
+        int g = guessnumber.guess_number(n);
 
         if (g == hidden_number) {
             System.out.println(String.format("Correct: answer found in %d queries", numq));

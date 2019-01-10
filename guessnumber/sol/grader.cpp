@@ -24,11 +24,11 @@ char ask(int x) {
     else return '=';
 }
 
-int guess(int n);
+int guess_number(int n);
 
 int main() {
     assert(scanf("%d %d", &n, &hidden_number) == 2);
-    int g = guess(n);
+    int g = guess_number(n);
     printf("%d\n", g);
     printf("%d\n", numq);
     return 0;

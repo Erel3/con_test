@@ -24,7 +24,7 @@ char ask(int x) {
     else return '=';
 }
 
-int guess(int n);
+int guess_number(int n);
 
 int main() {
     scanf("%d %d", &n, &hidden_number);
@@ -32,7 +32,7 @@ int main() {
         printf("Wrong constraints\n");
         exit(0);
     }
-    int g = guess(n);
+    int g = guess_number(n);
     if (g == hidden_number) {
         printf("Correct: answer found in %d queries\n", numq);
         exit(0);

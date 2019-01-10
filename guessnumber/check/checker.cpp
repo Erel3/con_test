@@ -20,25 +20,24 @@ int main(int argc, char **argv) {
         int q;
         fscanf(fout, "%d", &q);
         if(sub == 1) {
-            fprintf(stderr, "Sub1: %d queries, ", q);
-            if(q <= 5) {
+            fprintf(stderr, "Sub 1: %d queries, ", q);
+            if(q <= 3) {
                 fprintf(stderr, "ok\n");
                 printf("1.0\n");
             } else {
-                fprintf(stderr, "Sub1: too many queries\n");
+                fprintf(stderr, "too many queries\n");
                 printf("0.0\n");
             }
         } else if(sub == 2) {
-            fprintf(stderr, "Sub2: %d queries, ", q);
+            fprintf(stderr, "Sub 2: %d queries", q);
             if(q <= 10) {
-                fprintf(stderr, "ok\n");
+                fprintf(stderr, ", ok\n");
                 printf("1.0\n");
-            } else if(q <= 12) {
-                printf("0.736842105263157\n"); //95*x=70
-            } else  if(q <= 20) {
-                printf("0.526315789473684\n"); //95*x=50
+            } else if(q <= 50) {
+                int y = 95 - 2 * (q - 10);
+                printf("%.10lf\n", 1.0 * y / 95); //95*x=y
             } else {
-                printf(".1052631578947368\n"); //95*x=10
+                printf("0.0\n");
             }
         }
 	} else {

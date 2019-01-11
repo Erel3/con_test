@@ -29,12 +29,12 @@ int main(int argc, char **argv) {
         int q;
         fscanf(fout, "%d", &q);
         if(n <= 4) {
-            fprintf(stderr, "Sub 1: %d queries, ", q);
+            //fprintf(stderr, "Sub 1: %d queries, ", q);
             fprintf(stderr, "ok\n");
             printf("1.0\n");
             
         } else {
-            fprintf(stderr, "Sub 2: %d queries", q);
+            //fprintf(stderr, "Sub 2: %d queries", q);
             if(q <= 15) {
                 fprintf(stderr, ", ok\n");
                 printf("1.0\n");

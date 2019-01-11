@@ -6,8 +6,8 @@
 using namespace std;
 
 namespace {
-    const int maxn = 1000;
-    const int maxq = 1000;
+    const int maxn = 100;
+    const int maxq = 200;
     int numq = 0;
     int n;
     std::vector<int> a;
@@ -80,11 +80,11 @@ int main() {
     if (participant_solution.size() != n) {
         wrong_answer("-1");
     }
-
-    printf("%d\n", numq);
+	printf("%d\n", n);
     for (auto i: participant_solution) {
         printf("%d ", i);
     }
     printf("\n");
+    printf("%d\n", numq);
     return 0;
 }

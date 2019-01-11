@@ -2,8 +2,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class grader {
-    private final static int maxn = 1000;
-    private final static int maxq = 1000;
+    private final static int maxn = 100;
+    private final static int maxq = 200;
     private static int numq = 0;
     private static int n;
     private static int[] a;
@@ -47,9 +47,10 @@ public class grader {
                 wrong_answer("Not unique");
             }
         }
-        int[] pairwise_xor = new int[n * n];
-        for (int i = 0; i < positions.length; i++) {
-            for (int j = 0; j < positions.length; j++) {
+        int k = positions.length
+        int[] pairwise_xor = new int[k*k];
+        for (int i = 0; i < k; i++) {
+            for (int j = 0; j < k; j++) {
                 int posI = positions[i];
                 int posJ = positions[j];
 
@@ -71,11 +72,15 @@ public class grader {
             a[i] = x;
         }
         int[] answer = interactive.guess(n);
-
-        System.out.println(numq);
+		if (answer.length != n) {
+			wrong_answer("Answer not equal to n");
+			exit(0);
+		}
+        System.out.println(n);
         for (int i = 0; i < answer.length; i++) {
             System.out.print(answer[i] + " ");
         }
         System.out.println();
+        System.out.println(numq);
     }
 }

@@ -82,7 +82,7 @@ class grader {
             assert (0 <= a[i] && a[i] <= 1000000000);
         }
 
-        int[] answer = Interactive.guess(n);
+        int[] answer = Xoractive.guess(n);
 
         System.out.println(answer.length);
 

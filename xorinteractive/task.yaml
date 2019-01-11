@@ -1,0 +1,8 @@
+name: "xorinteractive"
+title: "xorinteractive"
+time_limit: 1
+memory_limit: 256
+n_input: 104
+infile: ""
+outfile: ""
+token_mode: disabled

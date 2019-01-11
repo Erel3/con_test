@@ -6,7 +6,6 @@ int a[233];
 int main(int argc, char **argv) {
 
     FILE *fin = fopen(argv[1], "r");
-	FILE *fres = fopen(argv[2], "r");
 	FILE *fout = fopen(argv[3], "r");
 
     int n;
@@ -15,17 +14,13 @@ int main(int argc, char **argv) {
     for(int i = 0; i < n; i++) {	
 	    fscanf(fin, "%d", &a[i]);
     }
-	int sub;
-	fscanf(fin, "%d", &sub);
 	int A, B;
-	fscanf(fres, "%d", &A);
 	fscanf(fout, "%d", &B);
-	if (A == B) {
-		for(int i = 0; i < A; i++) {
-			int ai, bi;		
-			fscanf(fres, "%d", &ai);
+	if (n == B) {
+		for(int i = 0; i < n; i++) {
+			int bi;		
 			fscanf(fout, "%d", &bi);
-			if (ai != bi) {		
+			if (a[i] != bi) {		
 				fprintf(stderr, "WA\n");
 				printf("0.0\n");
 				return 0;
@@ -33,12 +28,12 @@ int main(int argc, char **argv) {
 		}
         int q;
         fscanf(fout, "%d", &q);
-        if(sub == 1) {
+        if(n <= 4) {
             fprintf(stderr, "Sub 1: %d queries, ", q);
             fprintf(stderr, "ok\n");
             printf("1.0\n");
             
-        } else if(sub == 2) {
+        } else {
             fprintf(stderr, "Sub 2: %d queries", q);
             if(q <= 15) {
                 fprintf(stderr, ", ok\n");

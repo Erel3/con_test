@@ -90,6 +90,6 @@ class grader {
             System.out.print(answer[i] + " ");
         }
 
-        System.out.println(numberOfQueries);
+        System.out.println("\n" + numberOfQueries);
     }
 }

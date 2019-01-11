@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <cassert>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -74,7 +75,7 @@ vector<int> guess(int n);
 int main() {
     assert(scanf("%d", &n) == 1);
 
-    assert(1 <= n && n <= maxn);
+    assert(1 <= n && n <= MAX_VALUE_OF_N);
     
     for (int i = 1; i <= n; i++) {
         int x;
@@ -96,6 +97,6 @@ int main() {
         printf("%d ", i);
     }
     printf("\n");
-    printf("%d\n", numq);
+    printf("%d\n", numberOfQueries);
     return 0;
 }

@@ -1,11 +1,12 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class grader {
-    private final static int maxn = 100;
-    private final static int maxq = 200;
-    private static int numq = 0;
+class grader {
+    private final static int MAX_VALUE_OF_N = 100;
+    private final static int MAX_VALUE_OF_Q = 200;
+
     private static int n;
+    private static int numberOfQueries = 0;
     private static int[] a;
 
     private static void wrong_answer(String MSG) {
@@ -14,11 +15,13 @@ public class grader {
     }
 
     private static void query() {
-        numq++;
-        if (numq > maxq) {
+        numberOfQueries++;
+
+        if (numberOfQueries > MAX_VALUE_OF_Q) {
             wrong_answer("Number of queries exceeded");
         }
     }
+
     public static int ask(int position) {
         query();
 
@@ -31,6 +34,7 @@ public class grader {
 
     public static int[] get_pairwise_xor(int[] positions) {
         query();
+
         if (positions.length == 0 || positions.length > n) {
             wrong_answer("Not correct size");
         }
@@ -47,10 +51,11 @@ public class grader {
                 wrong_answer("Not unique");
             }
         }
-        int k = positions.length
-        int[] pairwise_xor = new int[k*k];
-        for (int i = 0; i < k; i++) {
-            for (int j = 0; j < k; j++) {
+
+        int[] pairwise_xor = new int[positions.length * positions.length];
+
+        for (int i = 0; i < positions.length; i++) {
+            for (int j = 0; j < positions.length; j++) {
                 int posI = positions[i];
                 int posJ = positions[j];
 
@@ -63,24 +68,28 @@ public class grader {
         return pairwise_xor;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)() {
         Scanner scanner = new Scanner(System.in);
         n = scanner.nextInt();
+
+        assert (1 <= n && n <= MAX_VALUE_OF_N);
+
         a = new int[n];
+
         for (int i = 0; i < n; i++) {
-            int x = scanner.nextInt();
-            a[i] = x;
+            a[i] = scanner.nextInt();
+
+            assert (0 <= a[i] && a[i] <= 1000000000);
         }
-        int[] answer = interactive.guess(n);
-		if (answer.length != n) {
-			wrong_answer("Answer not equal to n");
-			exit(0);
-		}
-        System.out.println(n);
+
+        int[] answer = Interactive.guess(n);
+
+        System.out.println(answer.length);
+
         for (int i = 0; i < answer.length; i++) {
             System.out.print(answer[i] + " ");
         }
-        System.out.println();
-        System.out.println(numq);
+
+        System.out.println(numberOfQueries);
     }
 }

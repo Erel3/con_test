@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
                 fprintf(stderr, ", ok\n");
                 printf("1.0\n");
             } else if(q <= 40) {
-                int y = 82 - 2 * (q - 16);
+                int y = 84 - 2 * (q - 16);
                 printf("%.10lf\n", 1.0 * y / 94); //94*x=y
             } else if(q <= 50) {
             	printf("0.372340426\n");  

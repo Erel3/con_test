@@ -1,0 +1,8 @@
+name: "punctuation"
+title: "punctuation"
+time_limit: 2
+memory_limit: 512
+n_input: 239
+infile: ""
+outfile: ""
+token_mode: disabled

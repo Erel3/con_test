@@ -1,0 +1,8 @@
+name: "acid-rain"
+title: "acid-rain"
+time_limit: 5
+memory_limit: 512
+n_input: 195
+infile: ""
+outfile: ""
+token_mode: disabled
